@@ -8,8 +8,8 @@ const char *AP_PASS = "12345678";
 
 //=======SETUP FUNCTION========
 void setup() {
+  delay(1000);
   Serial.begin(115200);
-  Serial.println();
   Serial.print("Configuring access point...");
   delay(2000);
   serverSetup();
@@ -68,6 +68,6 @@ String getId()
 //======END SETUP FUNCTION======
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  server.handleClient();
 
 }
